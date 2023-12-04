@@ -9,6 +9,13 @@ instances:
     disk_size_gb: 100
     network: "custom"
     subnetwork: internet-subnet
+  - name: "ldp"
+    type: "e2-standard-4"
+    zone: "asia-northeast1-a"
+    image: "ubuntu-2004-lts"
+    disk_size_gb: 100
+    network: "custom"
+    subnetwork: internet-subnet
   - name: "app"
     image: "ubuntu-2004-lts"
     disk_size_gb: 100
