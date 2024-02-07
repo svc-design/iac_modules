@@ -1,6 +1,6 @@
 #!/bin/bash
 
-terraform init
+terraform init -migrate-state
 if [ "$STATE" == "create" ]; then
     terraform apply -auto-approve
 elif [ "$STATE" == "destroy" ]; then
