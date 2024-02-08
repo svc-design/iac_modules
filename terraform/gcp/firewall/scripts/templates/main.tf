@@ -1,3 +1,7 @@
+locals {
+  config = yamldecode(file("../{{ vars.config }}"))
+}
+
 {% for rule in vars.firewall_rules %}
 resource "google_compute_firewall" "{{ rule.name }}" {
   name        = "{{ rule.name }}"
