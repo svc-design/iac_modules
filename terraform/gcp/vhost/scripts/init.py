@@ -27,6 +27,8 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     if args.config:
+        config = load_config( args.config )
+        print(f"Loaded config: {args.config}" )
         vars = {
             'config': args.config,
             'region': config.get('region'),
