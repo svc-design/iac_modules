@@ -36,3 +36,5 @@ if __name__ == '__main__':
         }
         print("templated main.tf")
         render_template('templates/main.tf', 'main.tf', vars)
+        print("templated variables.tf")
+        render_template('templates/variables.tf', 'variables.tf', vars)

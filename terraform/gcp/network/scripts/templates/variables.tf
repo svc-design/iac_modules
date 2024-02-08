@@ -1,3 +1,3 @@
 locals {
-  config = yamldecode(file("../{{ vars.config }}"))
+  config = yamldecode(file("../envs/{{ vars.config }}"))
 }
