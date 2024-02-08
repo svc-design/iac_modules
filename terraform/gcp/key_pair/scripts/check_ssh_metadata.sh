@@ -5,8 +5,8 @@ export config=$1
 script_dir="$(dirname "$(readlink -f "$0")")"
 
 # Read config.yaml and set environment variables
-project_id=$(yq eval '.project_id' "$script_dir/../../${config}")
-key_pairs_name=$(yq eval '.key_pairs[0].name' "$script_dir/../../${config}")
+project_id=$(yq eval '.project_id' "$script_dir/../../envs/${config}")
+key_pairs_name=$(yq eval '.key_pairs[0].name' "$script_dir/../../envs/${config}")
 
 if [ -z "$project_id" ]; then
   echo "Error: Project ID not set in config.yaml"
