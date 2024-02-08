@@ -7,7 +7,7 @@ from jinja2 import Environment, FileSystemLoader
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_config():
-    with open('config.yaml', 'r') as config_file:
+    with open('../config.yaml', 'r') as config_file:
         config = yaml.safe_load(config_file)
     return config
 
