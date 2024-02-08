@@ -8,7 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def load_config( config_name ):
-    config_file=f"../{config}"
+    config_file=f"../envs/{config}"
     with open(config__file, 'r') as config_file:
         config = yaml.safe_load(config_file)
     return config
@@ -24,7 +24,7 @@ def render_template( template_source, template_result, template_vars ):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("-c", "--config", help="iac resources config yaml", action="store_true")
+    parser.add_argument( "-c", "--config", dest='config', help="iac resources config yaml" )
 
     args = parser.parse_args()
     if args.config:
