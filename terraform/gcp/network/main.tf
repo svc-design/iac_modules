@@ -1,10 +1,10 @@
 # Create a VPC network
 resource "google_compute_network" "default" {
-  name                    = "dev"
+  name                    = local.config.vpc_name
   project                 = local.config.project_id
   auto_create_subnetworks = false
   delete_default_routes_on_create = true
-  description             = "My custom network for Dev"
+  description             = "My custom network"
 }
 
 # 子网1：路由到互联网网关出口的子网

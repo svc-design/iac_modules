@@ -1,3 +1,3 @@
 locals {
-  config = yamldecode(file("config.yaml"))
+  config = yamldecode(file("../config.yaml"))
 }
