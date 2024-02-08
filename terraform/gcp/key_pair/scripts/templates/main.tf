@@ -1,3 +1,7 @@
+locals {
+  ssh_keys_content = file("ssh_keys.pub")
+}
+
 resource "google_compute_project_metadata" "default" {
   metadata = {
     "ssh-keys" = <<EOF
